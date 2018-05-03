@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Atharva_Imageupload::menu" 
+            title="Atharva" 
+            translate="title" 
+            module="Atharva_Imageupload" 
+            sortOrder="20" 
+            resource="Atharva_Imageupload::menu"/>
+        <add id="Atharva_Imageupload::imageupload_index" 
+            title="Image Upload" 
+            module="Atharva_Imageupload" 
+            parent="Atharva_Imageupload::menu" 
+            sortOrder="30" 
+            dependsOnModule="Atharva_Imageupload" 
+            action="adminimageupload/image/index" 
+            resource="Atharva_Imageupload::menu"/>
+    </menu>
+</config>

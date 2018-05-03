@@ -1,0 +1,27 @@
+<?php
+/**
+ * Copyright © 2015 Simple. All rights reserved.
+ */
+$slider = $block->getSlider();
+/*echo '<pre>'; print_r($slider->getData());
+exit;*/
+?>
+<section class="slider-section">
+    <div class="container">
+        <div class="slider bxlslider">
+            <?php foreach($slider as $banner) : ?>
+                <div class="slide">
+                    <?php $i=1; ?>
+                    <img src="<?php echo $block->getUrl().'pub/media/adminimageupload/images/image'.$banner->getImage(); ?>" alt="<?php echo 'slide'.$i; $i++; ?>" />
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+require(['jquery'], function ($) {
+    jQuery('.bxlslider').bxSlider({
+        
+    });
+});
+</script>
