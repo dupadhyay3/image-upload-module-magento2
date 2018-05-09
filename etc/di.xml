@@ -25,12 +25,6 @@
             <argument name="filterPool" xsi:type="object" shared="false">ImageuploadDataGridFilterPool</argument>
         </arguments>
     </virtualType>
-    <virtualType name="Atharva\Imageupload\Model\ResourceModel\Image\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
-        <arguments>
-            <argument name="mainTable" xsi:type="string">atharva_imageupload</argument>
-            <argument name="resourceModel" xsi:type="string">Atharva\Imageupload\Model\ResourceModel\Image</argument>
-        </arguments>
-    </virtualType>
     <virtualType name="ImageuploadImageUploader" type="Atharva\Imageupload\Model\Uploader">
         <arguments>
             <argument name="baseTmpPath" xsi:type="const">Atharva\Imageupload\Model\Uploader::IMAGE_TMP_PATH</argument>
@@ -43,13 +37,6 @@
             </argument>
         </arguments>
     </virtualType>
-    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
-        <arguments>
-            <argument name="collections" xsi:type="array">
-                <item name="adminimageupload_image_grid_data_source" xsi:type="string">Atharva\Imageupload\Model\ResourceModel\Image\Grid\Collection</item>
-            </argument>
-        </arguments>
-    </type>
     <type name="Atharva\Imageupload\Model\UploaderPool">
         <arguments>
             <argument name="uploaders" xsi:type="array">
